@@ -12,6 +12,7 @@ import java.util.Date;
 // local test를 위해 url 정보 url="http://localhost:8082 로 수정 (localhost, port)
 @FeignClient(name="Payment", url="http://Payment:8080")
 //@FeignClient(name="Payment", url="http://localhost:8082")
+//@FeignClient(name="payment", url="${api.url.payment}")
 public interface PaymentService {
 
     @RequestMapping(method= RequestMethod.POST, path="/payments")
