@@ -37,6 +37,15 @@ logging:
     org.springframework.cloud: debug
 server:
   port: 8081
+
+feign:
+  hystrix:
+    enabled: true
+
+hystrix:
+  command:
+    default:
+      execution.isolation.thread.timeoutInMilliseconds: 600
 ---
 
 spring:
