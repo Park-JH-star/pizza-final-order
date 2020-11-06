@@ -62,3 +62,15 @@ spring:
         event-out:
           destination: pizza
           contentType: application/json
+api:
+  url:
+    payment: payment:8080
+
+feign:
+  hystrix:
+    enabled: true
+
+#hystrix:
+#  command:
+#    default:
+#      execution.isolation.thread.timeoutInMilliseconds: 680

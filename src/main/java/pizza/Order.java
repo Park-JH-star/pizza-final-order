@@ -19,6 +19,14 @@ public class Order {
     private String orderStatus ="Ordered";
     private Long qty;
 
+    @PrePersist
+    public void onPrePersist(){
+        try {
+            Thread.currentThread().sleep((long) (400 + Math.random() * 300));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
     @PostPersist
     public void onPostPersist(){

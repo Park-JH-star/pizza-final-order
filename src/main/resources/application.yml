@@ -70,7 +70,7 @@ feign:
   hystrix:
     enabled: true
 
-#hystrix:
-#  command:
-#    default:
-#      execution.isolation.thread.timeoutInMilliseconds: 680
+hystrix:
+  command:
+    default:
+      execution.isolation.thread.timeoutInMilliseconds: 600
